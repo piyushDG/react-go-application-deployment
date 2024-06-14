@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-    image: ui:latest
+    image: piyushdg/ui:latest
     command: sh -c "npm install && npm start"
     ports:
       - "3000:3000"
@@ -10,7 +10,7 @@ services:
       - backend
 
   backend:
-    image: be:latest
+    image: piyushdg/be:latest
     command: sh -c "go run main.go"
     ports:
       - "8080:8080"
